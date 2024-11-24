@@ -10,32 +10,21 @@ Ascii Coder is a Java-based application designed to provide a graphical user int
 - Encode and decode ASCII characters
 - Lightweight and easy to use
 
-## Installation
+## Installation  
+To use Ascii Coder, follow these steps:  
 
-To set up the Ascii Coder project on your local machine, follow these steps:
+1. **Download the JAR file:**  
+   Go to the [Releases](https://github.com/ArtemSinchuk/ascii-coder/releases) section and download the latest version of `Ascii coder.jar`.  
 
-1. **Clone the repository:**
+2. **Run the application:**  
+   - Option 1: Open a terminal or command prompt and execute:  
+     ```bash
+     java -jar "Ascii coder.jar"
+     ```  
+   - Option 2: Simply double-click the downloaded `Ascii coder.jar` file (ensure `.jar` files are associated with Java on your system).  
 
-   ```bash
-   git clone https://github.com/yourusername/ascii-coder.git
-   ```
+**Note:** Make sure Java 17 or higher is installed on your computer.  
 
-2. **Navigate to the project directory:**
-
-   ```bash
-   cd ascii-coder
-   ```
-
-3. **Build the project using Maven (or your preferred build tool):**
-
-   ```bash
-   mvn clean install
-   ```
-
-4. **Run the application:**
-   ```bash
-   java -cp target/ascii-coder-1.0.jar com.ascii.AsciiMain
-   ```
 
 ## Usage
 
