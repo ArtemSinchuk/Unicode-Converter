@@ -27,6 +27,7 @@ public class AsciiGUI extends JFrame {
         setTitle("ASCII Converter");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(575, 275);
+        getContentPane().setBackground(new Color(0xd3d3d3));
         setLocationRelativeTo(null);
         setLayout(null);
         addComponents();
