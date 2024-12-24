@@ -7,12 +7,13 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.*;
 
 public class AsciiGUI extends JFrame {
-    private JTextArea InputTextArea = new JTextArea(5, 30), translatedTextArea = new JTextArea(5, 30), asciiTextArea = new JTextArea(5, 30);
-    private JButton copyTranslationButton = new JButton("Select and Copy"), copyAsciiButton = new JButton("Select and Copy"), changeThemeButton = new JButton();
-    private JLabel englishTextLabel = new JLabel("Enter Text"), rusTextLabel = new JLabel("Translate"), asciiCodeLabel = new JLabel("ASCII Code"),imageTest = new JLabel();
+    private JTextArea InputTextArea, translatedTextArea, asciiTextArea;
+    private JButton copyTranslationButton, copyAsciiButton, changeThemeButton = new JButton();
+    private JLabel englishTextLabel, rusTextLabel, asciiCodeLabel, imageTest = new JLabel();
     ImageIcon themeMoon = new ImageIcon("moon.png");
 
     public AsciiGUI() {
+        initialization();
         config();
         addCopyButtonListeners();
         addDocListeners();
@@ -107,6 +108,21 @@ public class AsciiGUI extends JFrame {
         configureTextArea();
         configureFrame();
         configureLabels();
+    }
+    private void initialization() {
+        InputTextArea = new JTextArea(5, 30);
+        translatedTextArea = new JTextArea(5, 30);
+        asciiTextArea = new JTextArea(5, 30);
+        copyTranslationButton = new JButton("Select and Copy");
+        copyAsciiButton = new JButton("Select and Copy");
+        changeThemeButton = new JButton();
+        englishTextLabel = new JLabel("Enter Text");
+        rusTextLabel  = new JLabel("Translate");
+        asciiCodeLabel  = new JLabel("ASCII Code");
+    }
+
+    public void initializeLabels(JLabel lbl, String text) {
+        lbl.setText(text);
     }
 
     private boolean updating = false;
