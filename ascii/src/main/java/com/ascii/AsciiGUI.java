@@ -87,15 +87,23 @@ public class AsciiGUI extends JFrame {
         asciiField.setEditable(false);
     }
 
-    public void addCopyButtonListeners() {
-        copyButton.addActionListener(e -> {
-            String text = textField1.getText();
-            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(text), null);
+     public void addCopyButtonListeners() {
+        copyTranslationButton.addActionListener(e -> {
+            String text = translatedTextArea.getText();
+            try {
+                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(text), null);
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Failed to copy text: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
-        copyButton2.addActionListener(e -> {
-            String text = asciiField.getText();
-            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(text), null);
+        copyAsciiButton.addActionListener(e -> {
+            String text = asciiTextArea.getText();
+            try {
+                Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(text), null);
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Failed to copy text: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
         changeTheme.addActionListener(e -> {
