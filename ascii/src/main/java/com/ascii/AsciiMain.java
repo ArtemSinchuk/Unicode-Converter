@@ -9,6 +9,6 @@ package com.ascii;
  */
 public class AsciiMain {
   public static void main(String[] args) {
-    new AsciiGUI();
+    SwingUtilities.invokeLater(() -> new AsciiGUI());
   }
 }
