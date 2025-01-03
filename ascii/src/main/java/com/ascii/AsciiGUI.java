@@ -9,8 +9,10 @@ import java.awt.event.*;
 public class AsciiGUI extends JFrame {
     private JTextArea InputTextArea, translatedTextArea, asciiTextArea;
     private JButton copyTranslationButton, copyAsciiButton, changeThemeButton = new JButton();
-    private JLabel englishTextLabel, rusTextLabel, asciiCodeLabel, imageTest = new JLabel();
-    ImageIcon themeMoon = new ImageIcon("moon.png");
+    private JLabel englishTextLabel, rusTextLabel, asciiCodeLabel;
+    private ImageIcon themeMoonIcon = new ImageIcon("C:\\Users\\GameTwo\\Desktop\\Projects\\programs\\Ascii coder\\ascii\\src\\main\\resources\\moon.png");
+    private Image moonImage = themeMoonIcon.getImage();
+    private ImageIcon scaledMoonImage = new ImageIcon(moonImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
 
     public AsciiGUI() {
         initialization();
@@ -41,24 +43,24 @@ public class AsciiGUI extends JFrame {
         add(copyTranslationButton);
         add(copyAsciiButton);
         add(changeThemeButton);
-        add(imageTest);
     }
 
     public void configureButtons() {
         configureButtons(copyTranslationButton, 200, 225, 150, 30);
         configureButtons(copyAsciiButton, 400, 225, 150, 30);
-        configureButtons(changeThemeButton, 10, 10, 150, 30);
-        // changeTheme.setOpaque(false);
-        // changeTheme.setContentAreaFilled(false);
-        changeThemeButton.setIcon(themeMoon);
+        configureButtons(changeThemeButton, 10, 10, 25, 25);
+        changeThemeButton.setIcon(scaledMoonImage);
+        changeThemeButton.setOpaque(false);
+        changeThemeButton.setContentAreaFilled(false);
     }
 
     public void configureLabels() {
         englishTextLabel.setBounds(10, 50, 150, 30);
         rusTextLabel.setBounds(200, 50, 150, 30);
         asciiCodeLabel.setBounds(400, 50, 150, 30);
-        imageTest.setBounds(200, 10, 150, 30);
-        imageTest.setIcon(themeMoon);
+    }
+    public void imageConfig() {
+        
     }
 
     public void configureTextArea() {
@@ -108,6 +110,7 @@ public class AsciiGUI extends JFrame {
         configureTextArea();
         configureFrame();
         configureLabels();
+        imageConfig();
     }
     private void initialization() {
         InputTextArea = new JTextArea(5, 30);
