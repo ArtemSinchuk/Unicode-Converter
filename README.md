@@ -7,7 +7,7 @@ Ascii Converter is a Java-based application designed to provide a graphical user
 ## Features
 
 - Graphical User Interface for easy interaction
-- Encode and decode ASCII characters
+- Encode ASCII characters
 - Lightweight and easy to use
 
 ## Installation  
