@@ -11,8 +11,9 @@ public class AsciiGUI extends JFrame {
     private JButton copyTranslationButton, copyAsciiButton, changeThemeButton = new JButton();
     private JLabel englishTextLabel, rusTextLabel, asciiCodeLabel;
     private ImageIcon themeMoonIcon = new ImageIcon("C:\\Users\\GameTwo\\Desktop\\Projects\\programs\\Ascii coder\\ascii\\src\\main\\resources\\moon.png");
-    private Image moonImage = themeMoonIcon.getImage();
-    private ImageIcon scaledMoonImage = new ImageIcon(moonImage.getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+    private ImageIcon themeSunIcon = new ImageIcon("C:\\Users\\GameTwo\\Desktop\\Projects\\programs\\Ascii coder\\ascii\\src\\main\\resources\\sun.png");
+    private ImageIcon scaledMoonImage = new ImageIcon(themeMoonIcon.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
+    private ImageIcon scaledSunImage = new ImageIcon(themeSunIcon.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
 
     public AsciiGUI() {
         initialization();
@@ -211,13 +212,13 @@ public class AsciiGUI extends JFrame {
     }
 
     public void setDarkTheme() {
-        configureTheme(new Color(0x181818), new Color(0xc3c3c3), new Color(0x1f1f1f));
+        configureTheme(new Color(0x181818), new Color(0xc3c3c3), new Color(0x1f1f1f), scaledSunImage);
     }
 
     public void setLightTheme() {
-        configureTheme(new Color(0xd3d3d3), Color.BLACK, Color.WHITE);
+        configureTheme(new Color(0xd3d3d3), Color.BLACK, Color.WHITE, scaledMoonImage);
     }
-    public void configureTheme(Color bg, Color fg, Color textAreaBg) {
+    public void configureTheme(Color bg, Color fg, Color textAreaBg, ImageIcon icon) {
         getContentPane().setBackground(bg);
         copyAsciiButton.setBackground(textAreaBg);
         copyAsciiButton.setForeground(fg);
@@ -232,5 +233,6 @@ public class AsciiGUI extends JFrame {
         englishTextLabel.setForeground(fg);
         rusTextLabel.setForeground(fg);
         asciiCodeLabel.setForeground(fg);
+        changeThemeButton.setIcon(icon);
     }
 }
