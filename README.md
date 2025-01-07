@@ -14,7 +14,7 @@ Ascii Converter is a Java-based application designed to provide a graphical user
 To use Ascii Converter, follow these steps:  
 
 1. **Download the JAR file:**  
-   Go to the [Releases](https://github.com/ArtemSinchuk/Ascii-Converter/releases/tag/v1.0) section and download the latest version of `Ascii Converter.jar`.  
+   Go to the [Releases](https://github.com/ArtemSinchuk/Ascii-Converter/releases/tag/v1.1) section and download the latest version of `Ascii Converter.jar`.  
 
 2. **Run the application:**  
    - Option 1: Open a terminal or command prompt and execute:  
@@ -44,4 +44,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Version
 
-- 1.0
+- 1.1
