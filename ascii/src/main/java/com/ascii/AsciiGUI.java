@@ -222,11 +222,11 @@ public class AsciiGUI extends JFrame {
     }
 
     public void setDarkTheme() {
-        configureTheme(new Color(0x181818), new Color(0xc3c3c3), new Color(0x1f1f1f), scaledSunImage);
+        configureTheme(ThemeManager.NERO, ThemeManager.SILVER, ThemeManager.DARK_NERO, scaledSunImage);
     }
 
     public void setLightTheme() {
-        configureTheme(new Color(0xd3d3d3), Color.BLACK, Color.WHITE, scaledMoonImage);
+        configureTheme(ThemeManager.LIGHT_GRAY, Color.BLACK, Color.WHITE, scaledMoonImage);
     }
     public void configureTheme(Color bg, Color fg, Color textAreaBg, ImageIcon icon) {
         getContentPane().setBackground(bg);
