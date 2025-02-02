@@ -23,8 +23,8 @@ public class UnicodeGUI extends JFrame {
     private JTextArea inputTextArea, translatedTextArea, unicodeTextArea;
     private JButton copyTranslationButton, copyUnicodeButton, changeThemeButton;
     private JLabel englishTextLabel, rusTextLabel, unicodeCodeLabel;
-    private ImageIcon themeMoonIcon = new ImageIcon("C:\\Users\\GameTwo\\Desktop\\Projects\\programs\\Unicode converter\\unicode\\src\\main\\resources\\moon.png");
-    private ImageIcon themeSunIcon = new ImageIcon("C:\\Users\\GameTwo\\Desktop\\Projects\\programs\\Unicode converter\\unicode\\src\\main\\resources\\sun.png");
+    private ImageIcon themeMoonIcon = new ImageIcon(getClass().getResource("/moon.png"));
+    private ImageIcon themeSunIcon = new ImageIcon(getClass().getResource("/moon.png"));
     private ImageIcon scaledMoonImage = new ImageIcon(themeMoonIcon.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
     private ImageIcon scaledSunImage = new ImageIcon(themeSunIcon.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH));
     private EventHandling event = new EventHandling();
