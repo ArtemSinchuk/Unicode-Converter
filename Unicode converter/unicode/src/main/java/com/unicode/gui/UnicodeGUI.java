@@ -79,7 +79,7 @@ public class UnicodeGUI extends JFrame {
     public void configureButtons() {
         configureComponents(copyTranslationButton, 200, 225, 150, 30);
         configureComponents(copyUnicodeButton, 400, 225, 150, 30);
-        configureComponents(changeThemeButton, 10, 10, 25, 25);
+        configureComponents(changeThemeButton, 10, 10, 24, 25);
         changeThemeButton.setIcon(scaledMoonImage);
         changeThemeButton.setOpaque(true);
         changeThemeButton.setContentAreaFilled(false);
