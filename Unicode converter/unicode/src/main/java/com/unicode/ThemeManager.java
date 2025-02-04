@@ -1,9 +1,17 @@
-package com.unicode;
+package com.unicode.theme;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
+import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
 
 public class ThemeManager {
   
@@ -29,6 +37,22 @@ public class ThemeManager {
     } catch (Exception e) {
       System.err.println("Failed to load theme, defaulting to light: " + e.getMessage());
       return false;
+    }
+  }
+
+  public void configureTheme(List<Component> list, Color bg, Color fg, Color textAreaBg, ImageIcon icon) {
+   for (Component comp : list) {
+        if (comp instanceof JFrame) {
+          ((JFrame)comp).getContentPane().setBackground(bg);
+        } else if (comp instanceof JTextArea || comp instanceof JButton) {
+          comp.setBackground(textAreaBg);
+          comp.setForeground(fg);
+          if ("changeThemeButton".equals(comp.getName())) {
+            ((JButton)comp).setIcon(icon);
+        }
+        } else if (comp instanceof JLabel) {
+          comp.setForeground(fg);
+      }
     }
   }
 }
