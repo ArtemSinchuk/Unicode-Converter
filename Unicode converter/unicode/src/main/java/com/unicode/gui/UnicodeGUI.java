@@ -83,6 +83,7 @@ public class UnicodeGUI extends JFrame {
         changeThemeButton.setIcon(scaledMoonImage);
         changeThemeButton.setOpaque(true);
         changeThemeButton.setContentAreaFilled(false);
+        changeThemeButton.setName("changeThemeButton");
         event.addCopyButtonListener(copyTranslationButton, translatedTextArea);
         event.addCopyButtonListener(copyUnicodeButton, unicodeTextArea);
         event.addThemeButtonListener(changeThemeButton, this);
@@ -115,7 +116,6 @@ public class UnicodeGUI extends JFrame {
             comp.setFont(new Font("Arial", Font.PLAIN, 12));
             ((JTextArea)comp).setLineWrap(true);
         } else {
-            // TODO: Expand support for additional component types if needed.
             throw new IllegalArgumentException("Unsupported component type: " + comp.getClass().getName());
         }
     }
